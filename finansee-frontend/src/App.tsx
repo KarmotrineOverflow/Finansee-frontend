@@ -1,35 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+export default function App() {
 
-function App() {
-  const [count, setCount] = useState(0)
+  // TODO: Design how the debt and upcoming bills systems will work
+  // Questions to ponder:
+  // - How to log debts? How will it integrate with the upcoming bills system?
+  // - How to schedule upcoming bills? (recurring vs once vs custom dates)
+  // - How to mark a debt or upcoming bill as paid? Through the tracker or in their systems?
+  // - Do we automate the logging of debts and upcoming bills when entries are added or modified on their systems, or let users manually input them in the tracker?
+  // - How do we handle deletion of debts/upcoming bills? They have to be able to be deleted with or without logs being written due to various circumstances
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
-
-export default App
