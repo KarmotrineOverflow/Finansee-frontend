@@ -1,0 +1,40 @@
+{
+    "Items": [
+        {
+            "User": "Elfie",
+            "MonthYear": "11-2025",
+            "Income": [
+                {
+                    "Type": "Salary",
+                    "Description": "1st payroll for this month",
+                    "Amount": 30000,
+                    "DateReceived": "11-10-2025",
+                    "Allocation": "Savings"
+                },
+                {
+                    "Type": "Debt",
+                    "Description": "Borrowed money from Arturo",
+                    "Amount": 10000,
+                    "DateReceived": "11-14-2025",
+                    "Allocation": "Pocket Money"
+                } 
+            ],
+            "Expense": [
+                {
+                    "Type": "Payment",
+                    "Description": "Bought shoes",
+                    "Amount": 2000,
+                    "DateSpent": "11-11-2025",
+                    "Allocation": "Pocket Money"
+                }
+            ],
+            "Debt": {
+                "isDebtor": true,
+                "To": "John Doe",
+                "Amount": 5000,
+                "Date": "11-11-2025",
+                "Allocation": "Pocket Money"
+            }
+        }
+    ]
+}

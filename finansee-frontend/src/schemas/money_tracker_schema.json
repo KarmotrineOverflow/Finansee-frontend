@@ -1,0 +1,31 @@
+{
+    "User": "__str__",
+    "MonthYear": "__date__ (MM-YYYY)",
+    "Income": [
+        {    
+            "Type": "__str__",
+            "Description": "__str__",
+            "Amount": "__float__",
+            "DateReceived": "__date__",
+            "Allocation": "__str__"
+        }
+    ],
+    "Expense": [
+        {
+            "Type": "__str__",
+            "Description": "__str__",
+            "Amount": "__float__",
+            "DateReceived": "__date__",
+            "Allocation": "__str__"
+        }
+    ],
+    "Debt": [
+        {
+            "isDebtor": "__bool__",
+            "To": "__str__",
+            "Amount": "__float__",
+            "Date": "__date__",
+            "Allocation": "__str__"
+        }
+    ]
+}

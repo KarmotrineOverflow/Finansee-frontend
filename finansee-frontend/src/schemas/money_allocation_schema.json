@@ -1,0 +1,21 @@
+{
+    "User": "__str__",
+    "MonthYear": "__date__ (MM-YYYY)",
+    "TotalMoney": "__float__",
+    "MoneyAllocation": {
+        "Account1": "__float__",
+        "Account2": "__float__"
+    },
+    "BudgetAllocation": {
+        "BudgetAllocation1": {
+            "BudgetName": "__str__",
+            "BudgetPlan": "__float__",
+            "BudgetSpent": "__float__"
+        },
+        "BudgetAllocation2": {
+            "BudgetName": "__str__",
+            "BudgetPlan": "__float__",
+            "BudgetSpent": "__float__"
+        }
+    }
+}
