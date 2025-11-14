@@ -34,16 +34,10 @@ export default function Dashboard({ firstName, lastName }: UserDetails) {
 
     return (
 
-        <>
-            <header>
-                <h1>Finansee</h1>
-            </header>
-
-            <main>
-                <h2>{Greeting()}</h2>
-                <p>Your financial standing for the month of {MONTHS[currentMonth]}</p>
-                
-            </main>
-        </>
+        <main>
+            <h2>{Greeting()}</h2>
+            <p>Your financial standing for the month of {MONTHS[currentMonth]}</p>
+            
+        </main>
     )
 }

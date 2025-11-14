@@ -1,3 +1,10 @@
+import {
+  LayoutDashboard,
+  FileSpreadsheet,
+  CalendarDays,
+  HandCoins
+} from 'lucide-react'
+import Sidebar, { SidebarItems } from "./components/Sidebar"
 import Dashboard from "./pages/Dashboard"
 
 export default function App() {
@@ -11,8 +18,21 @@ export default function App() {
   // - How do we handle deletion of debts/upcoming bills? They have to be able to be deleted with or without logs being written due to various circumstances
 
   return (
-    <main>
-      <Dashboard firstName="Elfie" lastName="Campit" />
-    </main>
+    <>
+      {/* <header className="flex-row w-full p-4 bg-amber-300">
+        <h1 className="text-green-800">Finansee</h1>
+      </header> */}
+
+      <Sidebar>
+        <SidebarItems icon={<LayoutDashboard color="white" strokeWidth={1} />} label="Dashboard" active={true}  />
+        <SidebarItems icon={<FileSpreadsheet color="white" strokeWidth={1} />} label="Tracker" active={false}  />
+        <SidebarItems icon={<CalendarDays color="white" strokeWidth={1} />} label="Monthly Budget" active={false}  />
+        <SidebarItems icon={<HandCoins color="white" strokeWidth={1} />} label="Debts" active={false}  />
+      </Sidebar>
+
+      <main>
+        <Dashboard firstName="Elfie" lastName="Campit" />
+      </main>
+    </>    
   )
 }
