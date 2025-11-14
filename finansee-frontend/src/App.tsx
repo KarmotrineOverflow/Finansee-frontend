@@ -1,3 +1,5 @@
+import Dashboard from "./pages/Dashboard"
+
 export default function App() {
 
   // TODO: Design how the debt and upcoming bills systems will work
@@ -9,7 +11,8 @@ export default function App() {
   // - How do we handle deletion of debts/upcoming bills? They have to be able to be deleted with or without logs being written due to various circumstances
 
   return (
-    <>
-    </>
+    <main>
+      <Dashboard firstName="Elfie" lastName="Campit" />
+    </main>
   )
 }
