@@ -53,7 +53,7 @@ export default function Sidebar({ children }: NavChildren) {
 export function SidebarItems({ icon, label, active }: NavItem) {
 
     const isActive = useContext(SidebarContext)
-
+    /* TODO: Add a callback function to the items to replace displayed content on click */
     return (
         <div className={` text-white relative flex items-center p-3 my-1 font-medium rounded-md cursor-pointer
         transition-colors
