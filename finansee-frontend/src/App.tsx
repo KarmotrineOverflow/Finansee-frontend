@@ -18,7 +18,7 @@ export default function App() {
   // - How do we handle deletion of debts/upcoming bills? They have to be able to be deleted with or without logs being written due to various circumstances
 
   return (
-    <>
+    <main className="flex flex-row w-full">
       {/* <header className="flex-row w-full p-4 bg-amber-300">
         <h1 className="text-green-800">Finansee</h1>
       </header> */}
@@ -30,9 +30,7 @@ export default function App() {
         <SidebarItems icon={<HandCoins color="white" strokeWidth={1} />} label="Debts" active={false}  />
       </Sidebar>
 
-      <main>
-        <Dashboard firstName="Elfie" lastName="Campit" />
-      </main>
-    </>    
+      <Dashboard firstName="Elfie" lastName="Campit" />
+    </main>    
   )
 }

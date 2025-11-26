@@ -1,22 +1,43 @@
+import MoneyCounter from '../components/MoneyCounter'
+import MONTHS from '../config/months.json'
+
 type UserDetails = {
     firstName: string,
     lastName: String,
 }
 
-const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-
 export default function Dashboard({ firstName, lastName }: UserDetails) {
 
-    // TODO: Inspect the month first before pulling data
+    // TODO: Inspect the month first before pulling data (why??)
     // Create MoneyCounter component for start and current net worth
 
     const date = new Date()
     const currentTime = date.getHours()
     const currentMonth = date.getMonth()
+    
+    const greetingStr = createGreetStr(currentTime, firstName)
 
-    const Greeting = (): string => {
+    return (
 
-        let prefix: string
+        <section className="flex flex-row h-screen w-full p-4">
+            <div className="flex flex-col w-full gap-5 text-center">
+                <div className="flex flex-col w-full">
+                    <h2>{greetingStr}</h2>
+                    <p>Your financial standing for the month of <b>{MONTHS.months[currentMonth]}</b></p>                                
+                </div>
+
+                <div className='flex flex-row justify-around'>
+                    <MoneyCounter label={"Starting Money"} cashTotal={300.77} />
+                    <MoneyCounter label={"Current Money"} cashTotal={670.77} />
+                </div>
+            </div>
+        </section>
+    )
+}
+
+function createGreetStr(currentTime: number, userName: string): string {
+
+    let prefix: string
         
         if (currentTime >= 6 && currentTime <= 11) {
 
@@ -29,15 +50,5 @@ export default function Dashboard({ firstName, lastName }: UserDetails) {
             prefix = "Good evening"
         }
 
-        return `${prefix}, ${firstName}!`
-    }
-
-    return (
-
-        <main>
-            <h2>{Greeting()}</h2>
-            <p>Your financial standing for the month of {MONTHS[currentMonth]}</p>
-            
-        </main>
-    )
+        return `${prefix}, ${userName}!`
 }
