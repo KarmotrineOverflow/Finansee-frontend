@@ -1,0 +1,50 @@
+{
+    "Username": "Elfie",
+    "MonthYear": "12-2025",
+    "StartingMoney": 300,
+    "CurrentMoney": 500,
+    "MoneyAllocation": {
+        "Savings": 200,
+        "PocketMoney": 100,
+        "EmergencyFund": 50
+    },
+    "MonthSheet": {
+        "Income": [
+            {
+                "Type": "Salary",
+                "Description": "Salary from CGI",
+                "Amount": 30000,
+                "DateReceived": "12-10-2025",
+                "Allocation": "Savings"
+            }
+        ],
+        "Expense": [
+            {
+                "Type": "Expense",
+                "Description": "Bought shoes",
+                "Amount": 500,
+                "DateSpent": "12-15-2025",
+                "Allocation": "Pocket Money"
+            }
+        ],
+        "Debt": [
+            {
+                "isDebtor": true,
+                "isPaid": false,
+                "To": "John",
+                "Amount": 300,
+                "Description": "Borrowed money for vehicle repair",
+                "Date": "12-11-2025",
+                "Allocation":"Pocket Money"
+            }
+        ],
+        "MonthlyDue": [
+            {
+                "BillName": "Electricity",
+                "isPaid": false,
+                "Amount": 2000,
+                "Date": "12-20-2025"
+            }
+        ]
+    }
+}

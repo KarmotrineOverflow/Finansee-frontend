@@ -1,3 +1,5 @@
+import ComparisonBarChart from '../components/ComparisonBarChart'
+import MoneyAllocationChart from '../components/MoneyAllocationChart'
 import MoneyCounter from '../components/MoneyCounter'
 import MONTHS from '../config/months.json'
 
@@ -21,16 +23,22 @@ export default function Dashboard({ firstName, lastName }: UserDetails) {
 
         <section className="flex flex-row h-screen w-full p-4">
             <div className="flex flex-col w-full gap-5 text-center">
-                <div className="flex flex-col w-full">
-                    <h2>{greetingStr}</h2>
-                    <p>Your financial standing for the month of <b>{MONTHS.months[currentMonth]}</b></p>                                
+                <div className="flex flex-col gap-4 w-full">
+                    <h2 className="font-medium text-[24px]">{greetingStr}</h2>
+                    <p className="font-light">Your financial standing for the month of <b className='text-[20px] text-green-800'><u>{MONTHS.months[currentMonth]}</u></b></p>                                
                 </div>
 
                 <div className='flex flex-row justify-around'>
-                    <MoneyCounter label={"Starting Money"} cashTotal={300.77} />
-                    <MoneyCounter label={"Current Money"} cashTotal={670.77} />
+                    <MoneyCounter label={"Starting Money"} cashTotal={parseFloat("300.77")} />
+                    <MoneyCounter label={"Current Money"} cashTotal={parseFloat("670.77")} />
                 </div>
-            </div>
+
+                <div className='w-full h-screen bg-amber-300'>
+                    <ComparisonBarChart />
+                    <div />
+                    <MoneyAllocationChart />
+                </div>
+            </div>            
         </section>
     )
 }
