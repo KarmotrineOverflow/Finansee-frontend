@@ -33,10 +33,7 @@ export default function Dashboard({ firstName, lastName }: UserDetails) {
                     <MoneyCounter label={"Current Money"} cashTotal={parseFloat("670.77")} />
                 </div>
 
-                <div className='w-full h-screen bg-amber-300'>
-                    <ComparisonBarChart />
-                    <div />
-                    <MoneyAllocationChart />
+                <div className='w-full h-screen bg-amber-300'>                    
                 </div>
             </div>            
         </section>
