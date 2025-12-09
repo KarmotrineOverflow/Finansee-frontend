@@ -37,6 +37,16 @@ export default function App() {
     setMonthlyReport(fetchMonthlyReport())
   }, [])
 
+  // TODO: Next steps:
+  // - Containerize the frontend and attach a NoSQL database container
+  // - Create test data for the following events:
+  //  * No report sheets exist - Creates an entirely new report sheet
+  //  * A report sheet already exists for the month - Takes the values and displays them
+  //  * The latest report sheet was from last month - Takes values from the last report and creates a new one for the month
+  //  * The latest report sheet was from 3 months ago - Takes values from the last report and creates a new one for the month
+  //  * The latest report sheet was from more than a year ago - Takes values from the last report and creates a new one for the month
+  // - Tweak the logic based on each event's output. Every event must be handled with the expected outputs
+
   return (    
     <main className="flex flex-row w-full">
       {/* <header className="flex-row w-full p-4 bg-amber-300">
